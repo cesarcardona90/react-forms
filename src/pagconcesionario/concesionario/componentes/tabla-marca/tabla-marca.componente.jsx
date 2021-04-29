@@ -4,17 +4,17 @@ import Modelo from '../modelo/modelo.componente';
 import Super from '../super/super.componente';
 
 
-const TablaMarca = () => {
+const TablaMarca = (props) => {
+
+    //console.log({props.utilidadList});
     return (
         <div className="tabla-marca.cont">
-            <d>Modelo</d>   <d>Alquilado</d>   <d>   Disponibles</d>
-             <Modelo nombreModelo="sport"/>
-             <Super super={{ }}    />                             
-           <Modelo nombreModelo="4x4"/>
-             <Super super={{}}    />                
-           
-            
-
+            {props.utilidadList.map((category, index)=>{
+                return (<>
+               <Modelo nombreModelo={category.name}/>
+               </>);
+            })}
+                
         </div>
     );
 }

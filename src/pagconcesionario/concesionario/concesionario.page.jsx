@@ -4,12 +4,10 @@ import TablaForms from './componentes/tabla-forms/tabla-forms.componente';
 
 const ConcesionarioPage = () => {
 
-    let utilidad = {
-
-        claselist:[
+    let utilidadList = [
             {
-                name:'sport',
-                nombre:[
+                name:"sport",
+                producto:[
                     {
                 nombre:"CX3",
                  alquilado:10,
@@ -43,8 +41,8 @@ const ConcesionarioPage = () => {
                 ]
             },
             {
-                name:'4x4',
-                nombre:[
+                name:"4x4",
+                producto:[
                     {
                         nombre:"jeep",
                         alquilado:1,
@@ -65,14 +63,14 @@ const ConcesionarioPage = () => {
 
             }
             
-        ]
-    }
+        ];
+    
     return (
         <div>
             
             <TablaPrincipal/>
             
-            <TablaForms/>
+            <TablaForms utilidadList = {utilidadList}/>
 
             
                     

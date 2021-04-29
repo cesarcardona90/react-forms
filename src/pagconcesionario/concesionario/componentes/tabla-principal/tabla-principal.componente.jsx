@@ -5,11 +5,11 @@ import TablaMarca from '../tabla-marca/tabla-marca.componente';
 
 
 
-const TablaPrincipal = () => {
+const TablaPrincipal = (props) => {
     return (
         <div className ="tabla-princial-cont">
             <Coches/>
-            <TablaMarca/>
+            <TablaMarca utilidadList={props.utilidadList}/>
           
             
         </div>   
